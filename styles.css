@@ -1,0 +1,231 @@
+/*RESET*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: #f4f4f4;
+}
+/* TOGGLE*/
+
+.nav-toggle {
+  display: none;
+  position: absolute;
+}
+.nav-checkbox {
+  display: none;
+}
+.toggle-icon {
+  width: 30px;
+}
+ .toggle-icon-close {
+  display: none;
+  width: 30px;
+}
+.nav-checkbox:checked ~ .nav-list {
+  display: block;
+}
+.nav-checkbox:checked + .nav-toggle > .toggle-icon{
+  display: none;
+}
+.nav-checkbox:checked + .nav-toggle > .toggle-icon-close{
+  display: block;
+}
+
+/*ANIMACION*/
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2E4057;
+    z-index: 10;
+    padding: 10px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);   
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+}
+.nav-list li {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+.nav-list li a {
+    padding: 7px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.nav-list li:hover, li.active {
+    background-color: rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+/*PARA HACERLO RESPONSIVO*/
+@media screen and (max-width:952px){
+    
+    .nav-list li a {
+        font-size: 16px;
+
+    }
+}
+@media screen and (max-width: 858px) and (orientation: landscape){
+    nav-list li {
+        margin: 5px 0 0 0;
+    }
+    nav-list {
+        overflow: scroll;
+    }
+}
+/*WELCOME SECTION H1 y P de presentacion*/
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+  .welcome-section > h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section > p {
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic; 
+  }
+  @media (max-width: 28.75em) {
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  /*PROJETS SECTION*/
+  .projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+  
+    
+  }
+  .projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+ /*CONTAC SECTION*/
+ .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  } 
+  /*Download CV*/
+.here-you-have-my-cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.here-you-have-my-cv-header {
+  font-size: 1rem;
+}
+  
+  /*FOOTER*/
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+  }
+  
+  footer > p {
+    margin: 2rem;
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  @media (max-width: 660px) {
+    .nav-toggle {
+      display: block;
+    }
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      display: none;
+    }
+  }
